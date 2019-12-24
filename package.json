@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/abdelrahmansafwat/nintendo-switch-sales#readme",
   "dependencies": {
-    "csv-parser": "^2.3.2",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "moment": "^2.24.0",
