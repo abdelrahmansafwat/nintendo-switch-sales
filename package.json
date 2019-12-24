@@ -1,0 +1,33 @@
+{
+  "name": "nintendo-switch-sales",
+  "version": "1.0.0",
+  "description": "A Twitter Bot for Nintendo Switch Sales",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdelrahmansafwat/nintendo-switch-sales.git"
+  },
+  "keywords": [
+    "Twitter",
+    "Bot"
+  ],
+  "author": "Abdelrahman M. Safwat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abdelrahmansafwat/nintendo-switch-sales/issues"
+  },
+  "homepage": "https://github.com/abdelrahmansafwat/nintendo-switch-sales#readme",
+  "dependencies": {
+    "csv-parser": "^2.3.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "mongoose": "^5.8.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
