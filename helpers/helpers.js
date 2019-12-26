@@ -21,9 +21,10 @@ function searchForScheduled(){
 function schedule(sale){
   let currentTime = moment();
   let scheduledTime = moment(sale.schedule);
-  console.log(sale);
+  //console.log(sale);
+  //post(sale.sales);
   setTimeout(function(){
-    post(sale.sales);
+    post(sale);
     searchForScheduled();
   }, scheduledTime.diff(currentTime));
 
@@ -43,18 +44,11 @@ function post(sales){
 }
 */
 
-function post(sales){
+function post(sale){
     console.log('Posting Tweet...');
-  
+    let status = `${sale.header}\n#NintendoSwitch\n\n${sale.sales.map(sale => {return `${sale.game} - $${sale.price} (${sale.discount}% off/${moment(sale.expiration).format("MMM.DD")})\n\n`;}).join('')}`;
     Twitter.post('statuses/update', {
-        status: 
-        `
-        JUST WENT ON SALE (${moment().format("MMM.DD")})\n
-        #NintendoSwitch\n\n
-        ${sales.map(sale => {
-            return `${sale.game} - $${sale.price} (${sale.discount}% off/${moment(sale.expiration).format("MMM.DD")})\n\n`;
-        })}
-        `
+        status: status
       },
         function(err, data, response) {
           if (err){

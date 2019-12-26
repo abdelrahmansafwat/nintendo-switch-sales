@@ -31,6 +31,10 @@ let saleSchema = new Schema({
         type: Date,
         required: true
     },
+    header: {
+        type: String,
+        required: true
+    },
     posted: {
         type: Boolean,
         default: false
